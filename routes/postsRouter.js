@@ -10,7 +10,7 @@ const {
 } = require("../conntrollers/postsController");
 
 router.post("/", verifyToken, createPost);
-router.get("/", verifyToken, getAllPosts);
+router.get("/", getAllPosts);
 router.get("/:id", verifyToken, getPostById);
 router.put("/:id", verifyToken, updatePost);
 router.delete("/:id", verifyToken, deletePost);
